@@ -1,0 +1,88 @@
+{% extends "pages/baseAdmin.html" %}
+
+{% block title %}
+We Learn | Edit Post
+{% endblock title %}
+
+{% block object%}
+Edit Post
+{%endblock%}
+
+{% block content %}
+
+<div class="row">
+    <div class="col-xs-12">
+        <div class="box">
+            <!-- /.box-header -->
+            <div class="box-body">
+                <div class="panel panel-primary">
+                    <div class="panel-heading">Edit post "{{post.title}}"</div>
+                    <div class="panel-body">
+                        <form action="/manage/UpdatePost" method="POST">
+
+                            <div class="form-group">
+                                <input type="hidden" value="{{post.id}}" name="id" id="postID"/>
+                                <label>Title : </label>
+                                <input class="form-control" type="text" value="{{post.title}}" name="title" />
+                            </div>
+                            <div class="form-group row ">
+                                <div class="col-md-6">
+                                    <label>Date created : </label>
+                                    <input class="form-control" type="text" value="{{post.dateCreate|date:'h:i d/m/Y'}}"
+                                        name="dateCreate" readonly />
+                                </div>
+                                <div class="col-md-6">
+                                    <label>Author : </label>
+                                    <input class="form-control" type="text" value="{{post.creator}}" name="author"
+                                        readonly />
+                                </div>
+                            </div>
+                            <label>Category : </label>
+                            <select class="form-control" name="CatID">
+                                {% for cat in lst_cat %}
+                                {% if post.catID == cat.id %}
+                                {% with patient as p %}
+                                <option value="{{cat.id}}" selected>
+                                    {{cat.title}}
+                                </option>
+                                {% endwith %}
+                                {% else %}
+                                {% with patient.parent as p %}
+                                <option value="{{cat.id}}">
+                                    {{cat.title}}
+                                </option>
+                                {% endwith %}
+                                {% endif %}
+
+                                {%endfor %}<br />
+                            </select>
+                            <div class="form-group">
+                                <label>Description : </label>
+                                <input class="form-control" type="text" value="{{post.description}}" name="descripton" />
+                            </div>
+
+                            <div class="form-group">
+                                <label>Content : </label>
+                                <textarea name="content" id="ten">
+                                    {{post.content|safe}}
+                                </textarea>
+                                <script>CKEDITOR.replace('ten', { height: 600 });</script>
+                                {% comment %} <input class="form-control" type="text" value="" name="content" />
+                                {%endcomment %}
+                            </div>
+
+                            <div class="form-group">
+                                <input class="form-control btn btn-primary" type="submit" value="Submit" id="test" onclick="Mess('Update succesfully')"/>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+            <!-- /.box-body -->
+        </div>
+        <!-- /.box -->
+    </div>
+</div>
+
+{% endblock content %}

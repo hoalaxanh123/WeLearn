@@ -1,0 +1,7 @@
+"<div class="secondary-nav">
+        <ul>
+            {% for subject in Subjects %}
+            <li><a href="{{subject.title}}" title="{{subject.title}}">{{subject.title}}</a></li>
+            {% endfor %}
+        </ul>
+    </div>

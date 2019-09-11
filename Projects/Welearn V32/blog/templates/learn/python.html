@@ -1,0 +1,26 @@
+{% extends "pages/base.html" %}
+
+{% block Logo %}
+<div class="logo">
+    <a href="/blog/python-programing" title="Python Programming">Python Logo</a>
+</div>
+{% endblock Logo %}
+
+
+{% block MenuLanguage%}
+<nav class="main-nav">
+    <h2>MENU</h2>
+    <ul>
+        <li class="desktop-only"><a class="material-icons" title="Programiz Home" href="/blog/python-programing">home</a></li>
+        <li title="Python Tutorial"><a class="python" title="Python Tutorial" href="/blog/python-programing">Python</a></li>
+        <li><a class="python" title="Python Examples" href="/blog/python-examples">Examples</a></li>
+        <li class="python" class="desktop-only"><a title="Python Built-in Functions" href="/blog/python-programming/methods/built-in">Built-in
+                Functions</a></li>
+        <li class="desktop-only"><a class="python" title="Python Quiz" href="/blog/python-programming/quiz">Quiz</a></li>
+    </ul>
+</nav>
+{% endblock MenuLanguage %}
+
+{% block content %}
+{{post.content|safe}}
+{% endblock content %}

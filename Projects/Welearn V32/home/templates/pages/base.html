@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="x-dns-prefetch-control" content="on" />
+    <link rel="dns-prefetch" href="" />
+    <title>We learn | 1510289</title>
+    <!--[if IE 9]>
+<link rel="prefetch" href="" />
+<![endif]-->
+    {% load static %}
+    <link rel="shortcut icon" href="{% static 'sources/sites/tutorial2program/files/python-favicon.png' %} " type="image/png">
+    <meta name="description" content="This is a comprehensive guide on how to get started in Python, why you should learn it and how you can learn it." />
+    <meta name="generator" content="Drupal 7 (http://drupal.org)" />
+    <link rel="canonical" href="python-programming" />
+    <link rel="shortlink" href="node/490" />
+    <meta name="google-site-verification" content="17JZPeRuYVi-HGRJIG06Wx4uVrQSGPSGk7RLbZ7LaTA" />
+    <script src="{% static 'sources/sites/all/themes/Python/js/datacamp.js' %}"></script>
+    <meta name="msvalidate.01" content="AC4EA77B0980B7169F9EEC142ADCC15B" />
+
+    <script>
+        googletag.cmd.push(function () {
+            if (window.innerWidth > 768) {
+                googletag.defineSlot('8095840/.2_A.34657.4_Programiz.com_tier1', [300, 250], 'div-gpt-ad-1527670429257-0').addService(googletag.pubads());
+                googletag.defineSlot('8095840/.2_A.34660.4_Programiz.com_tier1', [300, 250], 'div-gpt-ad-1527670429257-1').addService(googletag.pubads());
+
+            }
+            else {
+                googletag.defineSlot('8095840/.2_A.34653.4_Programiz.com_tier1', [300, 250], 'div-gpt-ad-1527670353707-0').addService(googletag.pubads());
+            }
+            googletag.enableServices();
+        });
+    </script>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link type="text/css" rel="stylesheet" href="{% static '/sources/sites/tutorial2program/files/cdn/css/https/css_WSgzCiaLFuERen0TMp4LzgnjcxS3tn-QyZRD85wZ2cs.css' %}"
+        media="all" />
+    <link type="text/css" rel="stylesheet" href="{% static '/sources/sites/tutorial2program/files/cdn/css/https/css_3I03pJits2CKnSomFtyZgUmNkiDHMl2HjyoOrdsGu_8.css' %}"
+        media="all" />
+    <link type="text/css" rel="stylesheet" href="{% static '/sources/sites/tutorial2program/files/cdn/css/https/css_VWGhZkkR4B4tMJA7PC_wov8dAxaI-MS03BCM3K8jjJA.css' %}"
+        media="screen" />
+    <link type="text/css" rel="stylesheet" href="{% static '/sources/sites/tutorial2program/files/cdn/css/https/css_36JbTIbHkX9TeP0yu3dTHrOHbHF-6-_qVnhNK0wAa7k.css' %}"
+        media="all" />
+    <link type="text/css" rel="stylesheet" href="{% static '/sources/sites/tutorial2program/files/cdn/css/https/css_RiWFi-q4j3G0Aw5fZdXsjvTWl3NDus9dZ2ItXZM9PXQ.css' %}"
+        media="all" />
+    <link type="text/css" rel="stylesheet" href="{% static '/sources/sites/tutorial2program/files/cdn/css/https/css_Kc6ZIO9LRHzY-xdsB0qKRPba0OXJhf6K80hVAEkz3Bo.css' %}"
+        media="all" />
+    <link type="text/css" rel="stylesheet" href="{% static '/sources/sites/tutorial2program/files/cdn/css/https/css_5aQvY9eDN5XIiayMtb_05FejVu1px73z0dS0wFjNJKo.css' %}"
+        media="all" />
+    <script type="text/javascript" src="/ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script type="text/javascript">
+    < !--//--><![CDATA[//><!--
+            window.jQuery || document.write("<script src='sites/all/modules/jquery_update/replace/jquery/1.10/jquery.min.js'>\x3C/script>")
+    //--><!]]>
+    </script>
+    <script type="text/javascript" src="{% static '/sources/sites/tutorial2program/files/js/js_vSmhpx_T-AShyt_WMW5_TcwwxJP1imoVOa8jvwL_mxE.js' %}"></script>
+    <script type="text/javascript" src="/ajax.googleapis.com/ajax/libs/jqueryui/1.10.2/jquery-ui.min.js"></script>
+    <script type="text/javascript">
+        < !--//--><![CDATA[//><!--
+        window.jQuery.ui || document.write("<script src='sites/all/modules/jquery_update/replace/ui/ui/minified/jquery-ui.min.js'>\x3C/script>")
+    //--><!]]>
+    </script>
+    <script type="text/javascript" src="{% static '/sources/sites/tutorial2program/files/js/js_Xdog1yvbsHUl33-wo9ctRnQMgE_3uBBG15y3yJm_2eY.js' %}"></script>
+    <script type="text/javascript" src="{% static '/sources/sites/tutorial2program/files/js/js_6mtNsXgWzNZac4UBJK9kpj3XdXTz7NcBgjY5eMSdK94.js' %}"></script>
+    <script type="text/javascript">
+            < !--//--><![CDATA[//><!--
+            (function (i, s, o, g, r, a, m) { i["GoogleAnalyticsObject"] = r; i[r] = i[r] || function () { (i[r].q = i[r].q || []).push(arguments) }, i[r].l = 1 * new Date(); a = s.createElement(o), m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m) })(window, document, "script", "//www.google-analytics.com/analytics.js", "ga"); ga("create", "UA-36675496-1", { "cookieDomain": "auto" }); ga("set", "anonymizeIp", true); ga("send", "pageview");
+    //--><!]]>
+    </script>
+    <script type="text/javascript" src="{% static '/sources/sites/tutorial2program/files/js/js_wM3ZVQV_RMgznHQKpN4op7713uyo_WqRmvODZE-pr1E.js' %}"></script>
+    <script type="text/javascript" src="{% static '/sources/sites/tutorial2program/files/js/js_1idk1Z3VP3hlw_7ergGcv0EkKW5OmiHkq_oP2y09WAM.js' %}"></script>
+    <script type="text/javascript">
+    < !--//--><![CDATA[//><!--
+            jQuery.extend(Drupal.settings, { "basePath": "\/", "pathPrefix": "", "ajaxPageState": { "theme": "python", "theme_token": "9TnKw_bzgyRwU3PmH_7yZjRYCsCaotCL-faXfBz4AAU", "js": { "sites\/all\/libraries\/prettify\/prettify.js": 1, "sites\/all\/modules\/prettify\/prettify.loader.js": 1, "\/\/ajax.googleapis.com\/ajax\/libs\/jquery\/1.10.2\/jquery.min.js": 1, "0": 1, "misc\/jquery.once.js": 1, "misc\/drupal.js": 1, "\/\/ajax.googleapis.com\/ajax\/libs\/jqueryui\/1.10.2\/jquery-ui.min.js": 1, "1": 1, "sites\/all\/modules\/codefilter\/codefilter.js": 1, "sites\/all\/modules\/search_autocomplete\/js\/jquery.autocomplete.js": 1, "sites\/all\/modules\/google_analytics\/googleanalytics.js": 1, "2": 1, "sites\/all\/themes\/Ultimate\/js\/toc.js": 1, "sites\/all\/themes\/Ultimate\/sidr-package-1.2.1\/jquery.sidr.min.js": 1, "sites\/all\/themes\/Ultimate\/js\/plugins.js": 1, "sites\/all\/themes\/Ultimate\/js\/main.js": 1 }, "css": { "modules\/system\/system.base.css": 1, "modules\/system\/system.menus.css": 1, "modules\/system\/system.messages.css": 1, "modules\/system\/system.theme.css": 1, "misc\/ui\/jquery.ui.core.css": 1, "misc\/ui\/jquery.ui.theme.css": 1, "misc\/ui\/jquery.ui.menu.css": 1, "misc\/ui\/jquery.ui.autocomplete.css": 1, "sites\/all\/modules\/codefilter\/codefilter.css": 1, "modules\/field\/theme\/field.css": 1, "modules\/node\/node.css": 1, "sites\/all\/modules\/quiz\/quiz.css": 1, "modules\/user\/user.css": 1, "sites\/all\/modules\/views\/css\/views.css": 1, "sites\/all\/modules\/ctools\/css\/ctools.css": 1, "sites\/all\/modules\/search_autocomplete\/css\/themes\/basic-blue.css": 1, "sites\/all\/themes\/Ultimate\/css\/title-page.css": 1, "sites\/all\/themes\/Ultimate\/css\/normalize.css": 1, "sites\/all\/themes\/Ultimate\/css\/main.css": 1, "sites\/all\/themes\/Ultimate\/sidr-package-1.2.1\/stylesheets\/jquery.sidr.dark.css": 1, "sites\/all\/themes\/Python\/python.css": 1, "sites\/all\/modules\/prettify\/styles\/stackoverflow.css": 1 } }, "prettify": { "linenums": false, "match": "", "nocode": "nocode", "custom": [], "markup": { "precode": true, "code": false, "pre": false } }, "search_autocomplete": { "form6": { "selector": "#search-api-page-search-form[action=\u0022\/searchh\u0022] #edit-keys-2", "minChars": "3", "max_sug": "10", "type": "internal", "datas": "https:\/\/www.programiz.com\/search_autocomplete\/autocomplete\/6\/", "fid": "6", "theme": "basic-blue", "auto_submit": "1", "auto_redirect": "1" }, "form7": { "selector": "#search-api-page-search-form-simplest-programming-tutorials-f #edit-keys-2", "minChars": "3", "max_sug": "10", "type": "internal", "datas": "https:\/\/www.programiz.com\/search_autocomplete\/autocomplete\/7\/", "fid": "7", "theme": "basic-blue", "auto_submit": "1", "auto_redirect": "1" } }, "googleanalytics": { "trackOutbound": 1, "trackMailto": 1, "trackDownload": 1, "trackDownloadExtensions": "7z|aac|arc|arj|asf|asx|avi|bin|csv|doc(x|m)?|dot(x|m)?|exe|flv|gif|gz|gzip|hqx|jar|jpe?g|js|mp(2|3|4|e?g)|mov(ie)?|msi|msp|pdf|phps|png|ppt(x|m)?|pot(x|m)?|pps(x|m)?|ppam|sld(x|m)?|thmx|qtm?|ra(m|r)?|sea|sit|tar|tgz|torrent|txt|wav|wma|wmv|wpd|xls(x|m|b)?|xlt(x|m)|xlam|xml|z|zip" }, "urlIsAjaxTrusted": { "\/python-programming": true } });
+    //--><!]]>
+    </script>
+    <title>{% block title %}{% endblock title %}</title>
+</head>
+<body>
+    <div id="programiz-header" class="nav-down clearfix">
+        <header class="header-wrapper">
+            <div class="logo-header-wrapper clearfix">
+                {% block Logo %}{% endblock Logo %}
+                <div class="secondary-nav">
+                    <ul>
+                        <li><a href="python-programming" title="Python">Python</a></li>
+                        <li><a href="Cpp-programming" title="C++">C++</a></li>
+                        <li><a href="CSharp-programming" title="C#">C#</a></li>
+                        <li><a href="Java-programming" title="Java">Java</a></li>
+                        <li><a href="PHP-programming" title="PHP">PHP</a></li>
+                        <li><a href="ASP-programming" title="ASP .NET">ASP .NET</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="main-nav-wrapper clearfix" id="HeaderMenu">
+                <div>
+                    {% block MenuLanguage %}{% endblock MenuLanguage %}
+                    <a href="" class="material-icons search-icon">search</a>
+                </div>
+            </div>
+        </header>
+    </div>
+    <!-- programiz-header End -->
+    {% block content %}
+
+    {% endblock content %}
+    <footer id="footer">
+        <div class="clearfix footer-wrapper">
+            <div class="footer-left">
+                <div class="region region-footer-left">
+                    <div id="block-block-86" class="block block-block">
+                        <div class="content">
+                            <div class="subscribe ml-subscribe-form ml-subscribe-form-5357625" id="mlb2-5357625">
+                                <p>Get Latest Updates on Welearn</p>
+                                <div class="ml-vertical-align-center">
+                                    <div class="subscribe-form ml-block-success" style="display:none">
+                                        <div class="form-section">
+                                            <p>You have successfully subscribed to our
+                                                newsletter.</p>
+                                        </div>
+                                    </div>
+                                    <form action="//app.mailerlite.com/webforms/submit/z7v3o3" class="ml-block-form"
+                                        data-code="z7v3o3" method="POST" target="_blank"><input name="fields[email]"
+                                            placeholder="Enter Your Email" type="text" value="" />
+                                        <input name="ml-submit" type="hidden" value="1" /><button class="primary" type="submit">Subscribe</button><button
+                                            class="loading" disabled="disabled" style="display: none;" type="submit"><img
+                                                height="20" src="{% static 'sources/images/rolling.gif' %}" style="width: 20px; height: 20px;"
+                                                width="20" /></button></form>
+                                    <script>
+                                        function ml_webform_success_1805321() {
+                                            jQuery('.ml-subscribe-form-1805321 .ml-block-success').show();
+                                            jQuery('.ml-subscribe-form-1805321 .ml-block-form').hide();
+                                        };
+                                    </script>
+                                </div>
+                            </div>
+                            <script type="text/javascript" src="static/sources/js/w/webforms.js?v25"></script>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-right">
+                <div class="region region-footer-right">
+                    <div id="block-block-87" class="block block-block">
+
+                        <div class="content">
+                            <ul>
+                                <li><a href="/about-us">About</a></li>
+                                <li><a href="/contact">Contact</a></li>
+                                <li><a href="/advertise">Advertise</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div id="block-block-109" class="block block-block">
+
+
+                        <div class="content">
+                            <ul class="footer-nav-links">
+                                <li><a title="C Tutorial" href="c-programming">C Programming</a></li>
+                                <li><a title="C++ Programming" href="cpp-programming">C++ Programming</a></li>
+                                <li><a title="R Programming" href="r-programming">R Programming</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            Copyright © by DaLat University | All rights reserved | <a href="#">Privacy Policy</a> |
+            <a href="#">Terms of Use</a>
+        </div>
+    </footer>
+    <script type="text/javascript" src="static/sources/sites/tutorial2program/files/js/js_wMq06n34El81cPtKvKVuAehyOEwepE71d1W2gGcEjDE.js"></script>
+    <script type="text/javascript" src="static/sources/sites/tutorial2program/files/js/js_ZPMVUwauT3CzfUSIYk-Kc3nwhp80i90VcKjYuHm5owQ.js"></script>
+</body>
+
+</html>

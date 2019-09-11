@@ -1,0 +1,86 @@
+{% extends "pages/baseAdmin.html" %}
+
+{% block title %}
+We Learn | Categories
+{% endblock title %}
+
+{% block object%}
+Categories
+{%endblock%}
+
+{% block content %}
+<div class="row">
+    <div class="col-xs-12">
+        <div class="box">
+            <div class="box-header">
+                <h3 class="box-title">List of category</h3>
+                <br />
+                <a href="/manage/CreateCategory" class="btn btn-info" style="float:right"><span class="glyphicon glyphicon-plus"></span>&nbsp;Create</a>
+            </div>
+            <!-- /.box-header -->
+            <div class="box-body">
+                <table id="example1" class="table table-bordered table-striped table-hover table-responsive">
+                    <thead>
+                        <tr>
+                            <th>Title</th>
+                            <th>Description</th>
+                            <th>Subject</th>
+                            <th style="width: 10%">Function</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for cat in lst_cat %}
+                        <tr>
+                            <td>
+                                {{cat.title}}
+                            </td>
+                            <td>
+                                {{cat.description}}
+                            </td>
+                            <td>
+                                {% for sub in lst_sub %}
+                                {% if sub.id == cat.subjectID %}
+                                {% with patient as p %}
+                                {{sub.title}}
+                                {% endwith %}
+                                {% else %}
+                                {% with patient.parent as p %}
+
+                                {% endwith %}
+                                {% endif %}
+
+                                {%endfor %}<br />
+                            </td>
+
+                            <td style="text-align: center">
+                                <a href="/manage/catDetail/id={{cat.id}}">Edit</a>
+                                |
+                                <a href="/manage/catDelete/id={{cat.id}}">Delete</a>
+                            </td>
+                        </tr>
+                        {%endfor %}
+                    </tbody>
+
+                </table>
+            </div>
+            <!-- /.box-body -->
+        </div>
+        <!-- /.box -->
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{% endblock content %}

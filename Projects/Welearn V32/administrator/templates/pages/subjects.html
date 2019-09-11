@@ -1,0 +1,83 @@
+{% extends "pages/baseAdmin.html" %}
+
+{% block title %}
+We Learn | Subjects
+{% endblock title %}
+
+{% block object%}
+Subjects
+{%endblock%}
+
+{% block content %}
+<div class="row">
+    <div class="col-xs-12">
+        <div class="box">
+            <div class="box-header">
+                <h3 class="box-title">List of subject</h3>
+                <br />
+                <a href="/manage/CreateSubject" class="btn btn-info" style="float:right"><span class="glyphicon glyphicon-plus"></span>&nbsp;Create</a>
+            </div>
+            <!-- /.box-header -->
+            <div class="box-body">
+                <table id="example1" class="table table-bordered table-striped table-hover table-responsive">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Description</th>
+                            <th>Logo</th>
+                            <th>Short name</th>
+                            <th>Date create</th>
+                            <th style="width: 10%">Function</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for sub in subjects %}
+                        <tr>
+                            <td>
+                                {{sub.title}}
+                            </td>
+
+                            <td>
+                                {{sub.description}}
+                            </td>
+                            <td>
+                                {{sub.logo}}
+                            </td>
+                            <td>
+                                {{sub.shortName}}
+                            </td>
+                            <td>
+                                {{sub.dateCreate|date:"h:i Y-m-d"}}
+                            </td>
+                            <td style="text-align: center">
+                                <a href="/manage/subDetail/id={{sub.id}}">Edit</a>
+                                |
+                                <a href="/manage/subDelete/id={{sub.id}}">Delete</a>
+                            </td>
+                        </tr>
+                        {%endfor %}
+                    </tbody>
+
+                </table>
+            </div>
+            <!-- /.box-body -->
+        </div>
+        <!-- /.box -->
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{% endblock content %}

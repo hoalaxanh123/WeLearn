@@ -1,0 +1,58 @@
+{% extends "pages/baseAdmin.html" %}
+
+{% block title %}
+We Learn | Categories
+{% endblock title %}
+
+{% block object%}
+Categories
+{%endblock%}
+
+{% block content %}
+
+<div class="row">
+    <div class="col-xs-12">
+        <div class="box">
+            <!-- /.box-header -->
+            <div class="box-body">
+                <div class="panel panel-primary">
+                    <div class="panel-heading">Create a category</div>
+                    <div class="panel-body">
+                        <form action="/manage/AddCategory" method="POST">
+
+                            <div class="form-group">
+                                <label>Title : </label>
+                                <input class="form-control" type="text" name="title" />
+                            </div>
+
+                            <div class="form-group">
+                                <label>Description : </label>
+                                <input class="form-control" type="text" name="descripton" />
+                            </div>
+
+
+                            <label>Select new ID : </label>
+                            <select class="form-control" name="SubID">
+                                {% for sub in subjects %}
+                                    <option value="{{sub.id}}">
+                                        {{sub.title}}
+                                    </option>
+                                {%endfor %}<br />
+                            </select>
+                            <br />
+
+                            <div class="form-group">
+                                <input class="form-control btn btn-primary" type="submit" value="Submit" />
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+            <!-- /.box-body -->
+        </div>
+        <!-- /.box -->
+    </div>
+</div>
+
+{% endblock content %}

@@ -1,0 +1,45 @@
+<link href="jquery.toast.css" rel="stylesheet" />
+<script src="jquery.toast.js"></script>
+<script>
+    function Mess(string) {
+        $.toast({
+            // custom message text
+            text: string,
+            // custom toast title
+            heading: 'Thông báo',
+            // show/hide transition effects.
+            // fade, slide or plain.
+            showHideTransition: 'fade',
+            // show a close icon
+            allowToastClose: true,
+            // auto hide after a timeout
+            hideAfter: 3000,
+            // loader
+            loader: true,
+            loaderBg: '#9EC600',
+            // stack length
+            stack: 3,
+            // bottom-left, bottom-right, bottom-center,
+            // top-left,top-right
+            // top-center, mid-center
+            // or an object representing the left, right, top, bottom values
+            position: 'bottom-left',
+            // background color
+            bgColor: '#444',
+            // custom text color
+            textColor: '#eee',
+            // custom text align
+            textAlign: 'left',
+            // custom icon
+            icon: false,
+            // callback functions.
+            beforeShow: function () {
+            },
+            afterShown: function () { },
+            beforeHide: function () { },
+            afterHidden: function () { },
+            onClick: function () { }
+        })
+    };
+
+</script>

@@ -1,0 +1,121 @@
+{% extends "pages/base.html" %}
+
+{% block Logo %}
+<div class="logo">
+    <a href="/blog/python-programing" title="Python Programming">Python Logo</a>
+</div>
+{% endblock Logo %}
+
+{% block MenuLanguage%}
+<nav class="main-nav">
+    <h2>MENU</h2>
+    <ul>
+        <li class="desktop-only"><a class="material-icons" title="Programiz Home" href="/blog/python-programing">home</a></li>
+        <li title="Python Tutorial"><a class="python" title="Python Tutorial" href="/blog/python-programing">Python</a></li>
+        <li><a class="python" title="Python Examples" href="/blog/python-examples">Examples</a></li>
+        <li class="python" class="desktop-only"><a title="Python Built-in Functions" href="/blog/python-programming/methods/built-in">Built-in
+                Functions</a></li>
+        <li class="desktop-only"><a class="python" title="Python Quiz" href="/blog/python-programming/quiz">Quiz</a></li>
+    </ul>
+</nav>
+{% endblock MenuLanguage %}
+
+{% block content %}
+<div id="main-wrapper-one-column" class="clearfix">
+    <div class="clearfix">
+        <div id="programiz-main-content">
+            <section class="main-content">
+                <h1>Python Programming Examples</h1>
+
+                <div class="inside-content">
+                    <div class="region region-content-inside">
+                        <div id="block-block-112" class="block block-block">
+                            <div class="content">
+                                <p>The best way to learn any programming language is by practicing examples on your
+                                    own.</p>
+                                <p>You are advised to take references of these examples and try them on your own.</p>
+                                <p>All programs in this page are tested and should work on almost all Python3
+                                    compilers.</p>
+                                <p>Feel free to use the source code on your system.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="clearfix">
+
+                    <div class="clearfix">
+                        <div class="one-column-left">
+
+                            <div class="region region-content">
+                                <div id="block-system-main" class="block block-system">
+
+
+                                    <div class="content">
+                                        <div class="view view-python-programming-examples-page view-id-python_programming_examples_page view-display-id-page view-dom-id-69240a9e58e9e7a41c8694b487430c9a jquery-once-1-processed">
+
+                                            <div class="view-filters">
+                                                <form class="ctools-auto-submit-full-form ctools-auto-submit-processed jquery-once-1-processed"
+                                                    action="/python-programming/examples" method="get" id="views-exposed-form-python-programming-examples-page-page"
+                                                    accept-charset="UTF-8">
+                                                    <div>
+                                                        <div class="views-exposed-form">
+                                                          
+                                                        </div>
+                                                    </div>
+                                                </form>
+                                            </div>
+
+
+                                            <div class="view-content">
+                                                <h3>List of examples : </h3>
+                                                <table class="views-table cols-0" summary="Example and Source code on various topics of Python programming">
+                                                    <tbody>
+                                                        {% for post in lstPost %}
+                                                        <tr>
+                                                            <td class="views-field views-field-title">
+                                                                <a href="python-examples/{{post.id}}" title="{{post.description}}">{{post.title}}</a>
+                                                            </td>
+                                                        </tr>
+                                                        {% endfor %}
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="one-column-right">
+
+                            <div class="region region-one-column-sidebar">
+                                <div id="block-block-114" class="block block-block">
+
+
+                                    <div class="content">
+                                        <style type="text/css">
+                                            .example_right_sidebar {
+                                                display: none;
+                                            }
+
+                                            @media(min-width: 900px) {
+                                                .example_right_sidebar {
+                                                    display: block;
+                                                    width: margin: auto;
+                                                    160px;
+                                                    height: 600px
+                                                }
+                                            }
+                                        </style>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+</div>
+{% endblock content %}

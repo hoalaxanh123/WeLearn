@@ -1,0 +1,70 @@
+{% extends "pages/baseAdmin.html" %}
+
+{% block title %}
+We Learn | Categories
+{% endblock title %}
+
+{% block object%}
+Categories
+{%endblock%}
+
+{% block content %}
+
+<div class="row">
+    <div class="col-xs-12">
+        <div class="box">
+            <!-- /.box-header -->
+            <div class="box-body">
+                <div class="panel panel-primary">
+                    <div class="panel-heading">Edit "{{category.title}}"</div>
+                    <div class="panel-body">
+                        <form action="/manage/UpdateCat" method="POST">
+
+                            <div class="form-group">
+                                <input type="hidden" value="{{category.id}}" name="id" />
+                                <label>Title : </label>
+                                <input class="form-control" type="text" value="{{category.title}}" name="title" />
+                            </div>
+
+                            <div class="form-group">
+                                <label>Description : </label>
+                                <input class="form-control" type="text" value="{{category.description}}" name="descripton" />
+                            </div>
+
+
+                            <label>Subject : </label>
+                            <select class="form-control" name="SubID">
+                                {% for sub in subjects %}
+                                    {% if sub.id == category.subjectID %}
+                                    {% with patient as p %}
+                                    <option value="{{sub.id}}" selected>
+                                        {{sub.title}}
+                                    </option>
+                                    {% endwith %}
+                                    {% else %}
+                                    {% with patient.parent as p %}
+                                    <option value="{{sub.id}}" >
+                                        {{sub.title}}
+                                    </option>
+                                    {% endwith %}
+                                    {% endif %}
+
+                                {%endfor %}<br />
+                            </select>
+                            <br />
+
+                            <div class="form-group">
+                                <input class="form-control btn btn-primary" type="submit" value="Submit" />
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+            <!-- /.box-body -->
+        </div>
+        <!-- /.box -->
+    </div>
+</div>
+
+{% endblock content %}

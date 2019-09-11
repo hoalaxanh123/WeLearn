@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+      {% load static %}
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+      <meta name="description" content="">
+      <meta name="author" content="">
+
+      <title>We-Learn 1.0 | 1510289 </title>
+
+      <!-- Bootstrap core CSS -->
+      <link href="{% static 'home/vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+
+      <!-- Custom fonts for this template -->
+      <link href="{% static 'home/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet' %}" type="text/css">
+      <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800'
+            rel='stylesheet' type='text/css'>
+      <link href='https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic'
+            rel='stylesheet' type='text/css'>
+
+      <!-- Plugin CSS -->
+      <link href="{% static 'home/vendor/magnific-popup/magnific-popup.css' %}" rel="stylesheet">
+
+      <!-- Custom styles for this template -->
+      <link href="{% static 'home/css/creative.min.css' %}" rel="stylesheet">
+
+</head>
+
+<body id="page-top">
+
+      <!-- Navigation -->
+      <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+            <div class="container">
+                  <a class="navbar-brand js-scroll-trigger" href="#page-top">We-Learn 1.0</a>
+                  <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive"
+                        aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                  </button>
+                  <div class="collapse navbar-collapse" id="navbarResponsive">
+                        <ul class="navbar-nav ml-auto">
+                              <li class="nav-item">
+                                    <a class="nav-link js-scroll-trigger" href="https://fb.com/hoalaxanh123" target="_newblank">Facebook</a>
+                              </li>
+                              <li class="nav-item">
+                                    <a class="nav-link js-scroll-trigger" href="#">Zalo</a>
+                              </li>
+                              <li class="nav-item">
+                                    <a class="nav-link js-scroll-trigger" href="#">Twitter</a>
+                              </li>
+                              <li class="nav-item">
+                                    <a class="nav-link js-scroll-trigger" href="/admin">Login</a>
+                              </li>
+                              <li class="nav-item">
+                                    <a class="nav-link js-scroll-trigger" href="/manage/login">Login ( Test )</a>
+                              </li>
+                        </ul>
+                  </div>
+            </div>
+      </nav>
+
+      <header class="masthead text-center text-white d-flex">
+            <div class="container my-auto">
+                  <div class="row">
+                        <div class="col-lg-10 mx-auto">
+                              <h1 class="text-uppercase">
+                                    <strong>THE WORLD'S LARGEST WEB DEVELOPER SITE</strong>
+                              </h1>
+                              <hr>
+                        </div>
+                        <div class="col-lg-8 mx-auto">
+                              <p class="text-faded mb-5">Welcome to the world of programmers, where everything starts</p>
+                              <button class="btn btn-primary btn-xl js-scroll-trigger" data-toggle="modal" data-target="#myModal">Learn
+                                    now</button>
+                        </div>
+                  </div>
+            </div>
+      </header>
+
+      <div class="modal fade" id="myModal" role="dialog">
+            <div class="modal-dialog modal-lg">
+                  <div class="modal-content">
+                        <div class="modal-header">
+                              <h4 class="modal-title" style="float:left">Select the programming language you want to
+                                    learn ?</h4>
+                        </div>
+                        <div class="modal-body">
+                              <div class="table-responsive">
+                                    <table style="width:100%" class="table">
+                                          <tr>
+                                                {% for sub in lst_sub %}
+
+                                                <td>
+                                                      <a href="/blog/{{sub.shortName}}-programing">
+                                                            <img src='{{sub.logo}}' class="img-responsive" width="100%" />
+                                                            <center>{{sub.title}}</center>
+                                                      </a>
+                                                </td>
+
+
+                                                {% endfor %}
+                                          </tr>
+
+                                    </table>
+                              </div>
+                        </div>
+                        <div class="modal-footer">
+                              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        </div>
+                  </div>
+            </div>
+      </div>
+      </div>
+
+      <!-- Bootstrap core JavaScript -->
+      <script src="{% static 'home/vendor/jquery/jquery.min.js' %}"></script>
+      <script src="{% static 'home/vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+
+      <!-- Plugin JavaScript -->
+      <script src="{% static 'home/vendor/jquery-easing/jquery.easing.min.js' %}"></script>
+      <script src="{% static 'home/vendor/scrollreveal/scrollreveal.min.js' %}"></script>
+      <script src="{% static 'home/vendor/magnific-popup/jquery.magnific-popup.min.js' %}"></script>
+
+      <!-- Custom scripts for this template -->
+      <script src="{% static 'home/js/creative.min.js' %}"></script>
+
+</body>
+
+</html>

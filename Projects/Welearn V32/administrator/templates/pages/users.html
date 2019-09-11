@@ -1,0 +1,86 @@
+{% extends "pages/baseAdmin.html" %}
+
+{% block title %}
+We Learn | Users
+{% endblock title %}
+
+{% block object%}
+Users
+{%endblock%}
+
+{% block content %}
+<div class="row">
+    <div class="col-xs-12">
+        <div class="box">
+            <div class="box-header">
+                <h3 class="box-title">List of user</h3>
+                <br />
+                <a href="/manage/CreateUser" class="btn btn-info" style="float:right"><span class="glyphicon glyphicon-plus"></span>&nbsp;Create</a>
+            </div>
+            <!-- /.box-header -->
+            <div class="box-body">
+                <table id="example1" class="table table-bordered table-striped table-hover table-responsive">
+                    <thead >
+                        <tr >
+                            <th >User name</th>
+                            <th>Real name</th>
+                            <th>Email</th>
+                            <th>Role</th>
+                            <th style="width: 10%">Function</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for user in lst_user %}
+                        <tr>
+                            <td>
+                                {{user.username}}
+                            </td>
+                            <td>
+                                {{user.realname}}
+                            </td>
+                            <td>
+                                {{user.email}}
+                            </td>
+                            <td>
+                                {% if user.role == 0 %}
+                                {% with patient as p %}
+                                    Administrator
+                                {% endwith %}
+                                {% else %}
+                                {% with patient.parent as p %}
+                                    Member
+                                {% endwith %}
+                                {% endif %}
+                            </td>
+                            <td style="text-align: center">
+                                <a href="/manage/userDetail/id={{user.id}}">Edit</a>
+                                |
+                                <a href="/manage/userDelete/id={{user.id}}">Delete</a>
+                            </td>
+                        </tr>
+                        {%endfor %}
+                    </tbody>
+
+                </table>
+            </div>
+            <!-- /.box-body -->
+        </div>
+        <!-- /.box -->
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{% endblock content %}

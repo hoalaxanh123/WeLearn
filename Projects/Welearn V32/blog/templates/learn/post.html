@@ -1,0 +1,142 @@
+{% extends "pages/base.html" %}
+
+{% block Logo %}
+<div class="logo">
+    <a href="#" title="Python Programming">Python Logo</a>
+</div>
+{% endblock Logo %}
+
+
+{% block MenuLanguage%}
+<nav class="main-nav">
+    <h2>MENU</h2>
+    <ul>
+        <li class="desktop-only"><a class="material-icons" title="150289 | Home" href="/blog/python-programming">home</a></li>
+        <li title="Python Tutorial"><a class="python" title="Python Tutorial" href="/blog/python-programming">Python</a></li>
+        <li><a class="python" title="Python Examples" href="/blog/python-examples">Examples</a></li>
+        <li class="python" class="desktop-only"><a title="Python Built-in Functions" href="/blog/python-builtin">Built-in
+                Functions</a></li>
+        <li class="desktop-only"><a class="python" title="Python Quiz" href="/blog/python-quiz">Quiz</a></li>
+    </ul>
+</nav>
+{% endblock MenuLanguage %}
+
+{% block content %}
+
+<div id="main-wrapper-two-column" class="clearfix">
+    <div class="clearfix">
+        <div id="programiz-main-content">
+            <section class="main-content">
+                {{post.content|safe}}
+            </section>
+        </div>
+        <aside id="programiz-left-sidebar">
+            <div class="region region-sidebar-left">
+                <div id="block-views-8b6522b68af87db686ded1cbe8175cb3" class="block block-views">
+                    <div class="content">
+                        <div class="view view-related-examples-c-cpp-python-r- view-id-related_examples_c_cpp_python_r_ view-display-id-block_2 header-list-menu view-dom-id-d00a5f9f9375f75629337b6a46964f54">
+                            <div class="view-header">
+                                <h2>Python Examples</h2>
+                            </div>
+                            <div class="view-content">
+                                <table class="views-table cols-0" summary="Related Python programming Examples">
+                                    <tbody>
+                                        <tr>
+                                            <td class="views-field views-field-title">
+                                                <a href="python-programming/examples/hello-world">Print Hello world!</a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="views-field views-field-title">
+                                                <a href="python-programming/examples/add-number" class="active">Add Two
+                                                    Numbers</a> </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="views-field views-field-title">
+                                                <a href="python-programming/examples/square-root">Find the Square Root</a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="views-field views-field-title">
+                                                <a href="python-programming/examples/area-triangle">Calculate the Area
+                                                    of a Triangle</a> </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="views-field views-field-title">
+                                                <a href="python-programming/examples/quadratic-roots">Solve Quadratic
+                                                    Equation</a> </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="views-field views-field-title">
+                                                <a href="python-programming/examples/swap-variables">Swap Two Variables</a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="views-field views-field-title">
+                                                <a href="python-programming/examples/random-number">Generate a Random
+                                                    Number</a> </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="block-block-154" class="block block-block">
+                    <div class="content">
+                        <style>
+                            .programiz_left1 { display: none; }
+        @media(min-width: 900px) { .programiz_left1 { margin: 30px auto; display: block; width: 300px; height: 250px; }} 
+        </style>
+                    </div>
+                </div>
+                <div id="block-block-29" class="block block-block">
+                    <div class="content">
+                        <div class="subscribe ml-subscribe-form ml-subscribe-form-1819301" id="mlb2-1819301">
+                            <h3>Receive the latest tutorial to improve your programming skills.</h3>
+                            <div class="ml-vertical-align-center">
+                                <div class="subscribe-form ml-block-success" style="display:none">
+                                    <div class="form-section">
+                                        <p>You have successfully subscribed to Python newsletter.</p>
+                                    </div>
+                                </div>
+                                <form action="//app.mailerlite.com/webforms/submit/s8v2x9" class="ml-block-form"
+                                    data-code="s8v2x9" method="POST" target="_blank"><input class="form-control" name="fields[email]"
+                                        placeholder="Enter Email Address*" type="text" value=""> <input name="ml-submit"
+                                        type="hidden" value="1"><button class="primary" type="submit">Join</button></form>
+                                <script>
+                                    function ml_webform_success_1819301() {
+                                        jQuery('.ml-subscribe-form-1819301 .ml-block-success').show();
+                                        jQuery('.ml-subscribe-form-1819301 .ml-block-form').hide();
+                                    };
+                                </script>
+                            </div>
+                        </div>
+                        <script type="text/javascript" src="js/w/webforms.js?v25"></script>
+                    </div>
+                </div>
+                <div id="block-block-46" class="block block-block">
+
+
+                    <div class="content">
+                        <style>
+                            .Programiz_Responsive_Left2 {
+                                display: none;
+                            }
+
+                            @media(min-width: 900px) {
+                                .Programiz_Responsive_Left2 {
+                                    margin: 30px auto;
+                                    display: block;
+                                    width: 300px;
+                                    height: 600px;
+                                }
+                            }
+                        </style>
+                    </div>
+                </div>
+            </div>
+        </aside>
+    </div>
+</div>
+{% endblock content %}
